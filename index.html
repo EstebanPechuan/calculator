@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+<body onkeydown="pressKey(event)">
+
+	<div class="container" >
+		
+		<div class="screen" value="">0</div>
+
+		<div class="buttons">
+			<div class="eachButton" value="7" onclick="printNum(7)">7</div>
+			<div class="eachButton" value="8" onclick="printNum(8)">8</div>
+			<div class="eachButton" value="9" onclick="printNum(9)">9</div>
+			<div class="function eachButton blue div" onclick="div(this)">/</div>
+			<div id="parent" class="parentNode" onclick="clearAll()">
+				<div class="red upSibling eachButton">C</div>
+				<div class="text">Use the 'Delete' key on your keyboard</div>
+			</div>
+
+			<div class="eachButton" value="4" onclick="printNum(4)">4</div>
+			<div class="eachButton" value="5" onclick="printNum(5)">5</div>
+			<div class="eachButton" value="6" onclick="printNum(6)">6</div>
+			<div class="function eachButton blue mult" onclick="mult(this)">x</div>
+			<div id="parent" class="parentNode" onclick="delLast()">
+				<div class="red upSibling eachButton">
+					<img src="img/arrow.png" alt="">
+				</div>
+				<div class="text">Use the 'Backspace' key on your keyboard</div>
+			</div>
+
+			<div class="eachButton" value="1" onclick="printNum(1)">1</div>
+			<div class="eachButton" value="2" onclick="printNum(2)">2</div>
+			<div class="eachButton" value="3" onclick="printNum(3)">3</div>
+			<div class="function eachButton blue sub" onclick="sub(this)">-</div>
+			<div class="function eachButton blue" onclick="percentage()">%</div>
+
+			<div class="eachButton" value="0" onclick="printNum(0)">0</div>
+			<div class="eachButton" onclick="dot(this)" value =".">.</div>
+			<div id="parent" class="parentNode" onclick="revert()">
+				<div class="upSibling eachButton">+/-</div>
+				<div class="text textInvert">Use the 'i' key on your keyboard</div>
+			</div>
+			<div class="function eachButton blue add" onclick="add(this)">+</div>
+			<div class="eachButton orange" onclick="result()">=</div>
+		</div>
+	</div>
+	
+
+	<script src="js/main.js"></script>
+</body>
+</html>
